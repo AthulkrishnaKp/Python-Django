@@ -1,0 +1,29 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+}
+
+.parent{
+    background-color: rgb(238, 0, 0);
+    width: 100%;
+    height: 500px;
+}
+
+.child{
+    width: 25%;
+    height: 300px;
+    float: left;
+}
+.child-one{
+    background-color: aqua;
+}
+.child-two{
+    background-color: rgb(38, 0, 255);
+}
+.child-three{
+    background-color: rgb(255, 251, 0);
+}
+.child-four{
+    background-color: rgb(43, 255, 0);
+}

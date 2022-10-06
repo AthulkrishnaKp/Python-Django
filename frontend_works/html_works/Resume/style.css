@@ -1,0 +1,84 @@
+body{
+    height: 230vh;
+    width: 96vw;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+}
+h1,p{
+    margin-bottom: 0%;
+    margin-top: 0%;
+}
+.top{
+    width: 40%;
+    margin-left: auto;
+    word-spacing: 30px;
+    display: flex;
+    height: 80px;
+}
+.ch{
+    display: flex;
+    background-color: rgb(19, 14, 31);
+    margin-left: 0%;
+}
+li{
+    display: inline-block
+}
+a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+.child{
+    font-size: large;
+    height: 40px;
+    margin-top: 20%;
+}
+.top2{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.child2{
+    margin-top: 150px ;
+    width: 80%;
+    margin-left: 20px;
+   
+}
+.p1{
+    margin-top: 50px;
+}
+
+.h1{
+    margin-top: 150px;
+}
+.expertise{
+    margin-top: 20px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+
+}
+.child3{
+    width: 100%;
+    margin-left: auto;
+    margin-top: 150px;
+}
+.skills{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 20px;
+    margin-left: 100px;
+    margin-top: 50px;
+    grid-gap: 20px;
+}
+.child4{
+    margin-top: 160px;
+}
+h3{
+    margin-top: 20px;
+    margin-bottom: 0%;
+}
+.p2{
+    margin-left: 30px;
+}

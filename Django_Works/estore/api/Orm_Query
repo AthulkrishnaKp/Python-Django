@@ -1,0 +1,113 @@
+
+from django.db import models
+
+
+class Books(models.Model):
+    name=models.CharField(max_length=200)
+    author=models.CharField(max_length=120)
+    price=models.PositiveIntegerField()
+    publisher=models.CharField(max_length=200)
+    qty=models.PositiveIntegerField(default=1)
+
+
+
+# django orm
+
+#  object relational mapping
+#      add create
+#      update
+#      delete
+#      list all items
+#      details
+
+# ORM QUERY FOR CREATING AN OBJECT :
+ ==================================
+
+ Modelname.objects.create(field1=value1,field2=value2,,,,.....)
+ eg:
+    Books.objects.create(name="randamoozham",price=450,author="mt",publisher="abc",qty=20)
+    Books.objects.create(name="arachar",price=500,author="meera",publisher="manorama",qty=50)
+    Books.objects.create(name="kasakinte ithihasam",price=650,author="ov vijayan",publisher="manorama",qty=65)
+    Books.objects.create(name="The Alchemist",price=600,author="Paulo Coelho",publisher="xyz",qty=35)
+
+
+# LISTING ALL RECORDS :
+ =====================
+
+ # Modelname.objects.all()
+ # eg:
+ #  qs=Books.objects.all()     (assign to a variable)
+ #  qs
+
+
+#   FETCHING SPECIFIC RESOURSE :
+  =============================
+
+ # Modelname.objects.get(id=2)
+ # eg:
+ #  data=Books.objects.get(id=2)
+ #  data
+ #  data.name prints the name of the book whose id =2
+ #  data.author prints the author of the book whose id =2
+ #  data.price prints the price of the book whose id =2
+
+
+# ORM QUERY FOR FILTERING AND GET SOME RECORDS : (Filter queries)
+ ==============================================
+
+ #  Modelname.objects.filter()
+ # eg:
+ #   qs=Books.objects.filter(price__lt=550)   (lessthan 550)
+ #   qs=Books.objects.filter(qty__gt=45)      (greater than)  (gte=Greater than of equal to)
+
+ # to get data of books whose price greatre than 500 and less than 650
+ #   data=Books.objects.filter(price__gte=500,price__lte=650)
+
+ #   data=Books.objects.filter(qty__gt=50,qty__lt=65)
+
+
+        #  EXCLUDE : (exclude some records)     (not equal to notsupported here)
+              ===================================
+
+        #   data=Books.objects.all().exclude(price=500)
+
+
+ Many Examples :
+
+       data=Books.objects.get(publisher="abc")
+
+  SORTING QUERY :
+ ===============
+     data=Books.objects.order_by("price")   (ascending order)
+     data=Books.objects.order_by("-price")  (descending order)
+
+  UPDATE TABLE :
+ ===============
+     data=Books.objects.filter(id=4).update(price=550)
+
+  DELETE RECORDS :
+ ================
+     Books.objects.get(id=6).delete()
+     Books.objects.filter(id=3).delete()
+
+ #####################################################################################
+
+
+obj=Books.objects.get(id=1)
+obj
+usr=User.objects.get(id=1)
+usr
+Reviews.objects.create(book=obj,User=usr,comment="avg",rating=3)
+
+Orm query to get reviews of a user =  parentref.childmodelname_set.all()
+                                      usr.reviews_set.all()
+                                     (name always lowercase)
+Review of one book = parentref.childmodelname_set.all()
+                     obj.reviews_set.all()
+
+#######################################################################################
+
+api for adding reviews
+
+localhost:8000/api/v1/products/1/add_review
+method POST

@@ -1,0 +1,33 @@
+.parent {
+    height: 1615px;
+    width: 990px;
+    background-color :  rgb(0, 189, 247) ;
+}
+
+.child {
+    height: 80px;
+    width: 300px;
+    border: 1px solid rgb(0, 0, 0);
+    color: white;
+
+}
+
+.child-one {
+    background-color: blueviolet;
+}
+
+.child-two {
+    background-color: rgb(17, 20, 172);
+}
+
+.child-three {
+    background-color: rgb(217, 255, 0);
+    color: rgb(248, 12, 12);
+}
+
+
+
+
+/* units px % em rem vh vw.... */
+/* relative units - % vh */
+/* absoluite units - px */
