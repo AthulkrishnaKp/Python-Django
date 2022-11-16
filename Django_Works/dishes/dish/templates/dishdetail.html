@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+{%block body_block%}
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                  <table class="table">
+                    <tr>
+                        <th>Dishname</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Rating</th>
+                    </tr>
+                    <tr>
+                        <td>{{dish.dish_name}}</td>
+                        <td>{{dish.category}}</td>
+                        <td>{{dish.price}}</td>
+                        <td>{{dish.rating}}</td>
+                    </tr>
+                  </table>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+
+{%endblock%}

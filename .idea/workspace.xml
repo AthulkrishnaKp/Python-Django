@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="23a35d38-f502-4987-b0aa-5315144b36e6" name="Changes" comment="" />
+    <list default="true" id="23a35d38-f502-4987-b0aa-5315144b36e6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Django_Works/stackclone/sclone/serializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django_Works/estore/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django_Works/estore/api/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django_Works/estore/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django_Works/estore/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django_Works/estore/estore/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django_Works/estore/estore/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Django_Works/estore/estore/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Django_Works/estore/estore/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Register/stackclone/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Register/stackclone/stackclone/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Register/stackclone/stackclone/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Register/stackclone/stackclone/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Register/stackclone/stackclone/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Register/stackclone/stackclone/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend_works/html_works/Bootstrapworks/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend_works/html_works/Bootstrapworks/register.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +23,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2FAQGaIa3WXoCRlEJfoQEBnenpi" />
   <component name="ProjectViewState">
@@ -18,7 +35,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "F:/PYTHON PROJECTS/Django_Works/taskapp"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

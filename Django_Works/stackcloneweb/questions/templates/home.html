@@ -1,0 +1,46 @@
+{%extends 'base.html'%}
+
+{%block body_block%}
+
+<div class="container">
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <div class="card border border-white">
+                <div class="card-body">
+                    <form action="" method="post" enctype="multipart/form-data">
+                        {%csrf_token%}
+                        {{form.as_p}}
+                        <div class="text-center mt-4">
+                            <input type="submit" value="Post">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+    <div class="row ">
+        <div class="col-2"></div>
+        <div class="col-8">
+            {%for q in questions%}   
+            <div class="col-lg-8">
+                <div class="card mb-4">
+                    {%if q.images%}
+                    <a href="#!"><img style="max-height: 350px;max-width: 100%;" class="card-img-top" src="{{q.images.url}}" alt="..." /></a>
+                    {%endif%}
+                    <div class="card-body">
+                        <div class="small text-muted">{{q.created_date}}</div>
+                        <h2 class="card-title h4">{{q.description}}</h2>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
+                        <a class="btn btn-primary mt-3" href="{%url 'questiondetail' q.id%}">View more →</a>
+                    </div>
+                </div>
+            </div>    
+            {%endfor%}
+        </div>
+        <div class="col-2"></div>                       
+    </div>
+</div>
+
+{%endblock%}

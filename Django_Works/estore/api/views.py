@@ -16,7 +16,8 @@ from rest_framework.decorators import action
 
 
 class ProductModelViewsetView(ModelViewSet):
-    authentication_classes = [authentication.TokenAuthentication]
+    # authentication_classes = [authentication.TokenAuthentication]
+
     permission_classes = [permissions.IsAuthenticated]
     serializer_class = BookModelSerializer
     queryset = Books.objects.all()
@@ -35,8 +36,7 @@ class ProductModelViewsetView(ModelViewSet):
     def addto_cart(self,request,*args,**kwargs):
         id=kwargs.get("pk")
         book=Books.objects.get(id=id)
-        Carts.objects.create(book=book,user=request.user,
-                             status=request.data.get("options"))
+        Carts.objects.create(book=book,user=request.user)
         return Response(data="created")
 
 
@@ -56,23 +56,6 @@ class ProductModelViewsetView(ModelViewSet):
         reviews=book.reviews_set.all()
         serializer=ReviewSerializer(reviews,many=True)
         return Response(data=serializer.data)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

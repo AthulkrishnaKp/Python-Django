@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import path
 # from api.views import ProductsView,MorningView,EveningView,
@@ -23,6 +24,7 @@ from django.urls import path
 #     ReviewDetailsView,ProductsViewsetView
 from api.views import ProductModelViewsetView,ReviewModelViewsetView,UserView
 from rest_framework.authtoken.views import ObtainAuthToken
+from rest_framework_simplejwt.views import TokenObtainPairView,TokenRefreshView
 
 from rest_framework.routers import DefaultRouter
 router=DefaultRouter()
@@ -34,7 +36,10 @@ router.register("register",UserView,basename="user")
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('token/', ObtainAuthToken.as_view())
+    path('token/',TokenObtainPairView.as_view()),
+    path('token/refresh/',TokenRefreshView.as_view())
+
+    # path('token/', ObtainAuthToken.as_view())
 
     # path('cube',Cubeview.as_view()),
     # path("numchk",Numcheck.as_view()),

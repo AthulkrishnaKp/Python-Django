@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+
+{%block body_block%}
+
+<div class="container">
+    <h1 class="text-center"></h1>
+    <div class="row mt-5 ">
+        <div class="col-3"></div>
+        <div align="center" class="col-6">
+            {%for q in myquestions%}   
+            <div class="col-lg-12">
+                <div class="card mb-4">
+                    {%if q.images%}
+                    <img style="max-height: 350px;max-width: 100%;" class="card-img-top" src="{{q.images.url}}" alt="..." />
+                    {%endif%}
+                    <div class="card-body">
+                        <div class="small text-muted">{{q.created_date}}</div>
+                        <h2 class="card-title h4">{{q.description}}</h2>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla.</p>
+                        <a class="btn btn-primary mt-3" href="{%url 'questiondetail' q.id%}">View more →</a>
+                    </div>
+                </div>
+            </div>    
+            {%endfor%}
+        </div>
+        <div class="col-3"></div>                       
+    </div>
+</div>
+</div>
+
+{%endblock%}

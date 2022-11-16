@@ -35,4 +35,3 @@ class Carts(models.Model):
     status=models.CharField(max_length=120,choices=options,default="in-cart")
 
 
-
